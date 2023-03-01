@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Embeded</div>
+    <div id="display_existing_data"></div>
+    
+    <script>
+        let display_existing_data=document.getElementById("display_existing_data")
+
+
+        async function getData(){
+           let data= await fetch("http://localhost:8080/")
+           console.log(await data.json())
+            display_existing_data.innerHTML=""
+           for(i=0;i<data.length;i++){
+            document.createElement("div")
+            div.innerHTML=data[i].PARAMETER
+
+
+           }
+           
+        }
+    //    let data= getData()
+
+        
+
+
+
+
+    </script>
+</body>
+</html>
